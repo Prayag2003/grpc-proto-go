@@ -1,0 +1,47 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build output
+*.test
+*.out
+
+# Output of the go coverage tool
+*.coverprofile
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories (vendor)
+vendor/
+
+# Go build cache
+*.a
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Protobuf generated files (if you generate .pb.go files)
+*.pb.go
+
+# Protobuf descriptor sets
+*.desc
+
+# Node modules (if using grpc-web)
+node_modules/
+
+# MacOS
+.DS_Store
+
+# Env files
+.env
+.env.*
