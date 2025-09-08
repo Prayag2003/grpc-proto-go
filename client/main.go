@@ -1,8 +1,9 @@
-package client
+package main
 
 import (
 	"log"
 
+	pb "github.com/Prayag2003/grpc-proto-go/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -18,11 +19,11 @@ func main() {
 	}
 	defer conn.Close()
 
-	// client := pb.NewGreetServiceClient(conn)
+	client := pb.NewGreetServiceClient(conn)
 
 	// names := &pb.NamesList{
 	// 	Names: []string{"A", "B", "C"},
 	// }
 
-	// callSayHello(client)
+	callSayHello(client)
 }
