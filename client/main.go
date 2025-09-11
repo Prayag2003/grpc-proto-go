@@ -21,9 +21,10 @@ func main() {
 
 	client := pb.NewGreetServiceClient(conn)
 
-	// names := &pb.NamesList{
-	// 	Names: []string{"A", "B", "C"},
-	// }
+	names := &pb.NamesList{
+		Names: []string{"A", "B", "C"},
+	}
 
 	callSayHello(client)
+	callSayHelloServerStream(client, names)
 }
