@@ -8,7 +8,7 @@ import (
 )
 
 func (s *helloServer) SayHelloFromServerStreaming(req *pb.NamesList, stream pb.GreetService_SayHelloFromServerStreamingServer) error {
-	log.Printf("Got request for names: %v", req)
+	log.Printf("SERVER STREAM: Got request for names: %v", req)
 	for _, name := range req.Names {
 		res := &pb.HelloResponse{
 			Message: "Hello " + name,
