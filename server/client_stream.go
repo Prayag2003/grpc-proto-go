@@ -8,6 +8,7 @@ import (
 )
 
 func (s *helloServer) SayHelloFromClientStreaming(stream pb.GreetService_SayHelloFromClientStreamingServer) error {
+	log.Println("CLIENT STREAMING...")
 	var messages []string
 	for {
 		req, err := stream.Recv()
